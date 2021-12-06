@@ -1,0 +1,6 @@
+ARG PULSAR_IMAGE_TAG
+FROM pulsar-function-base-runner:${PULSAR_IMAGE_TAG}
+
+WORKDIR /pulsar
+
+COPY func/exclamation/exclamation.sh /pulsar/function

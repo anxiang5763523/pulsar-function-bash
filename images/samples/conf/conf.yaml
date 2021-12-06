@@ -1,0 +1,25 @@
+pulsarServiceURL: "pulsar://10.96.175.178:6650"
+funcID: "ad2fd3ed-ad30-4e9e-8477-3e459e6feb5b"
+funcVersion: "1.0.0"
+# function details config
+tenant: "apache"
+nameSpace: "pulsar"
+name: "exclamation"
+logTopic: "persistent://apache/pulsar/log-topic-2"
+processingGuarantees: 0
+autoAck: true
+parallelism: 3
+# source config
+subscriptionType: 0
+subscriptionName: ""
+subscriptionPosition: 1
+# source input specs
+sourceSpecsTopic: persistent://apache/pulsar/test-topic-2
+isRegexPatternSubscription: false
+receiverQueueSize: 10
+# sink specs config
+sinkSpecsTopic: persistent://apache/pulsar/test-topic-output-2
+# retryDetails config
+maxMessageRetries: 0
+deadLetterTopic: ""
+funcPath: /root/go/sh

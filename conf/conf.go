@@ -24,7 +24,7 @@ import (
 	"gopkg.in/yaml.v2"
 	"io/ioutil"
 	"os"
-	log "pulsar-function-bash/logutil"
+	log "github.com/anxiang5763523/pulsar-function-bash/logutil"
 )
 
 const ConfigPath = "conf/conf.yaml"

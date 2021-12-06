@@ -21,7 +21,7 @@ package runtime
 
 import (
 	"fmt"
-	"pulsar-function-bash/conf"
+	"github.com/anxiang5763523/pulsar-function-bash/conf"
 )
 
 // This is the config passed to the Golang Instance. Contains all the information

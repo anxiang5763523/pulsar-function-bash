@@ -35,8 +35,8 @@ import (
 	"fmt"
 	"os/exec"
 
-	log "pulsar-function-bash/logutil"
-	conf "pulsar-function-bash/conf"
+	log "github.com/anxiang5763523/pulsar-function-bash/logutil"
+	conf "github.com/anxiang5763523/pulsar-function-bash/conf"
 )
 
 type function interface {

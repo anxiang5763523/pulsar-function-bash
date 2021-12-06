@@ -1,5 +1,4 @@
-FROM centos:8  as base
-FROM golang:1.16 as builder
+FROM golang:1.16
 
 WORKDIR /workspace
 
@@ -19,4 +18,4 @@ RUN mkdir -p /pulsar/bin/ \
     && mkdir -p /pulsar/conf/ \
     mkdir -p /pulsar/logs/
 
-COPY --from=builder  /workspace/shRuntime /pulsar/bin/shRuntime
+COPY ./shRuntime /pulsar/bin/shRuntime

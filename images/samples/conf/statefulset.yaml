@@ -1,0 +1,31 @@
+apiVersion: apps/v1
+kind: StatefulSet
+metadata:
+  name: exclamation
+  namespace: pulsar
+spec:
+  selector:
+    matchLabels:
+      app: exclamation
+  serviceName: "exclamation"
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: exclamation
+    spec:
+      terminationGracePeriodSeconds: 100
+      containers:
+      - name: exclamation
+        image: docker.io/anxiang57635230/exclamation:v1
+        command: ["/pulsar/bin/shRuntime"]
+        args: ["-instance-conf-path", "/pulsar/conf/conf.yaml"]
+        volumeMounts:
+        - name: config-volume
+          mountPath: /pulsar/conf
+      volumes:
+      - name: config-volume
+        configMap:
+          # Provide the name of the ConfigMap containing the files you want
+          # to add to the container
+          name: exclamation

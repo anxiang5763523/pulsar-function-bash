@@ -18,7 +18,7 @@ spec:
       containers:
       - name: exclamation
         image: docker.io/anxiang57635230/exclamation:v2
-        command: ["/pulsar/bin/shRuntime"]
+        # command: ["/pulsar/bin/shRuntime"]
         args: ["-instance-conf-path", "/pulsar/conf/conf.yaml"]
         volumeMounts:
         - name: config-volume

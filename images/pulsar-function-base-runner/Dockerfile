@@ -21,3 +21,5 @@ RUN mkdir -p /pulsar/bin/ \
 FROM alpine
 
 COPY --from=builder /workspace/shRuntime /pulsar/bin/shRuntime
+
+ENTRYPOINT ["/pulsar/bin/shRuntime"]
